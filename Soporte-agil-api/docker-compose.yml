@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_NAME=soporte_agil
+      - DB_USER=admin
+      - DB_PASS=admin_password
+
+  db:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: soporte_agil
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin_password
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
