@@ -74,3 +74,13 @@ Detener y reiniciar desde cero (borrando volúmenes):
 Bash
 docker-compose down -v
 docker-compose up -d --build
+---
+
+## ⚡ Simulación de Arquitectura Distribuida (Python)
+
+Para ejecutar las pruebas de concurrencia, manejo de hilos y evaluación de escalabilidad:
+
+1. Asegúrate de tener Python 3.x instalado.
+2. Ejecuta en la terminal:
+   ```bash
+   python simulacion_distribuida.py
