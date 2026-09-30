@@ -84,3 +84,8 @@ Para ejecutar las pruebas de concurrencia, manejo de hilos y evaluación de esca
 2. Ejecuta en la terminal:
    ```bash
    python simulacion_distribuida.py
+
+Para ejecutar el prototipo navegaciòn:
+1. Ejecuta en la terminal:
+   ```bash
+   python navegacion_optima.py
